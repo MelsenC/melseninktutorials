@@ -5,6 +5,9 @@
   font-weight: 200;
   box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
   background: image_url('nav-bg.png');
+  width: 100%;
+  padding-left: 2%;
+  padding-right: 2%;
 }
 
 .navbar-inverse a.navbar-brand {
@@ -44,4 +47,14 @@ h1, h2, h3, h4, h5, h6, .navbar {
 
 .btn {
   border-radius: 0;
+}
+
+body {
+  background: image_url('feature-bg.png');
+}
+
+.feature {
+  width: 100%;
+  padding-left: 5%;
+  padding-right: 5%;
 }
