@@ -61,3 +61,6 @@ end
 
 # include simple_form gem
 gem 'simple_form'
+
+# include Devise for security authentication
+gem 'devise'
