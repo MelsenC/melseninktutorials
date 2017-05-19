@@ -16,6 +16,23 @@
   font-size: 40px;
 }
 
+.booyah-box {
+  -moz-box-shadow: 1px 1px 2px 0 #d0d0d0;
+  -webkit-box-shadow: 1px 1px 2px 0 #d0d0d0;
+  box-shadow: 1px 1px 4px 0 #115599;
+  background: rgba(184, 208, 238, 0.7); /* #b8d0ee */
+  border: 2px solid #ccc;
+  border-color: #e4e4e4 #a0c0d0 #a0c0d0 #e4e4e4;
+  border-radius: 10px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  padding: 20px;
+}
+
+.booyah-box h1, .booyah-box h2 {
+  margin: 10px;
+}
+
 .hero {
   background: image_url('hero.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
