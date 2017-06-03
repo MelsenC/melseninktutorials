@@ -13,6 +13,15 @@
       <li>
         <%= section.title %>
         <%= link_to 'Add a new lesson', new_instructor_section_lesson_path(section), class: 'float-right btn btn-primary btn-small' %>
+        <ul>
+          <% section.lessons.each do |lesson| %>
+            <li>
+              <b><%= lesson.title %></b>
+              -
+              <%= lesson.subtitle %>
+            </li>
+          <% end %>
+        </ul>
         <br class="clr" />
       </li>
     <% end %>
