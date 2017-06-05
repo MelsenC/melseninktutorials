@@ -8,6 +8,12 @@
       <%= link_to course.title, course_path(course) %>
     </h2>
     <br />
+    <div class="row course-image-container">
+      <div class="col-12">
+        <%= image_tag course.image, class: 'img-fluid course-image mx-auto' %>
+      </div>
+    </div>
+    <br class="clr" />
     <div class="row">
       <div class="col-12 col-sm-8">
         <%= course.description %>
@@ -17,5 +23,6 @@
       </div>
     </div>
     <br class="clr" />
+    <hr />
   <% end %>
 </div>
