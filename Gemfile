@@ -62,5 +62,7 @@ end
 # include simple_form gem
 gem 'simple_form'
 
+gem 'carrierwave', '~> 1.0'
+
 # include Devise for security authentication
 gem 'devise'
