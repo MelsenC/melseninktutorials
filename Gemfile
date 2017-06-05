@@ -66,3 +66,9 @@ gem 'carrierwave', '~> 1.0'
 
 # include Devise for security authentication
 gem 'devise'
+
+# include Figaro for protecting sensitive data in local and heroku environment variables - gitignore
+gem 'figaro'
+
+# include fog for communicating with Amazon S3 file uploading
+gem "fog-aws"
