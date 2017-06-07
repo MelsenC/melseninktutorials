@@ -3,6 +3,12 @@
 <div class="booyah-box col-10 offset-1">
   <h1><%= @course.title %></h1>
   <br />
+
+  <% if flash[:error].present? %>
+    <div class="col-10 offset-1 alert alert-danger">
+      <%= flash[:error].html_safe %>
+    </div>
+  <% end %>
   <div class="row course-image-container">
     <div class="col-12">
       <%= image_tag @course.image, class: 'img-fluid course-image mx-auto' %>
