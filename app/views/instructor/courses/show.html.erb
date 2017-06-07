@@ -8,12 +8,10 @@
     </div>
   </div>
   <br class="clr" />
+  <%= link_to 'Add a new section...', new_instructor_course_section_path(current_course), class: 'btn btn-primary float-left' %>
   <%= link_to 'Preview as a Student', course_path(current_course), class: 'btn btn-warning float-right' %>
-  <br class="clr" />
-  <div class="text-center">
-    <%= link_to 'Add a new section...', new_instructor_course_section_path(current_course), class: 'btn btn-primary btn-large' %>
-  </div>
-
+  <br class="clr" />  
+  <hr />
   <ul>
     <% current_course.sections.each do |section| %>
       <li>
@@ -25,12 +23,13 @@
               <b><%= lesson.title %></b>
               -
               <%= lesson.subtitle %>
-              <%= link_to 'Edit Lesson', edit_instructor_section_lesson_path(section, lesson), class: 'float-right btn btn-secondary btn-small' %>
+              <%= link_to 'Edit Lesson', edit_instructor_section_lesson_path(section, lesson) %>
             </li>
           <% end %>
         </ul>
         <br class="clr" />
       </li>
+      <hr />
     <% end %>
   </ul>
 </div>

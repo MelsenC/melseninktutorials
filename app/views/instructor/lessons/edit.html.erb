@@ -7,6 +7,7 @@
     <%= f.input :video %>
     <br />
     <%= f.submit 'Update', class: 'btn btn-primary' %>
+    <%= link_to 'Cancel', instructor_course_path(current_section.course), class: 'btn btn-secondary' %>
     <br />
     <br />
   <% end %>
