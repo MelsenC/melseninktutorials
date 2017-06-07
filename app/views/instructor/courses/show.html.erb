@@ -25,6 +25,7 @@
               <b><%= lesson.title %></b>
               -
               <%= lesson.subtitle %>
+              <%= link_to 'Edit Lesson', edit_instructor_section_lesson_path(section, lesson), class: 'float-right btn btn-secondary btn-small' %>
             </li>
           <% end %>
         </ul>

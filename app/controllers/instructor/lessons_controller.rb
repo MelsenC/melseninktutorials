@@ -11,6 +11,28 @@ class Instructor::LessonsController < ApplicationController
     redirect_to instructor_course_path(current_section.course)
   end
 
+  def edit
+    @lesson = Lesson.find(params[:id])
+  end
+
+  def update
+    @lesson = Lesson.find(params[:id])
+
+    @lesson.update_attributes(lesson_params)
+    if @lesson.valid?
+      redirect_to instructor_course_path(current_section.course)
+    else
+      render :new, status: :unprocessable_entity
+    end
+  end
+
+  def destroy
+    @lesson = current_section.lessons.find(params[:id])
+
+    @lesson.destroy
+    redirect_to instructor_course_path(current_section.course)
+  end
+
   private
 
   def require_authorized_for_current_section
