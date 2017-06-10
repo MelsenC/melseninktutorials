@@ -23,7 +23,8 @@
               <b><%= lesson.title %></b>
               -
               <%= lesson.subtitle %>
-              <%= link_to 'Edit Lesson', edit_instructor_section_lesson_path(section, lesson) %>
+              <%= link_to 'Edit', edit_instructor_section_lesson_path(section, lesson), class: 'badge badge-success' %>
+              <%= link_to 'Delete', '#', class: 'badge badge-danger' %>
             </li>
           <% end %>
         </ul>
