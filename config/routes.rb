@@ -7,8 +7,9 @@ Rails.application.routes.draw do
   end
   resources :lessons, only: [:show]
   namespace :instructor do
+    resources :lessons, only: [:update, :destroy]
     resources :sections, only: [] do
-      resources :lessons
+      resources :lessons, only: [:new, :create, :edit]
     end
     resources :courses, only: [:new, :create, :show] do
       resources :sections, only: [:new, :create]

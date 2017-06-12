@@ -23,6 +23,8 @@ gem 'coffee-rails', '~> 4.2'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
+
+gem 'jquery-ui-rails'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
@@ -59,10 +61,9 @@ source 'https://rails-assets.org' do
   gem 'rails-assets-tether', '>= 1.3.3'
 end
 
-# include simple_form gem
-gem 'simple_form'
-
 gem 'carrierwave', '~> 1.0'
+
+gem 'carrierwave-aws'
 
 # include Devise for security authentication
 gem 'devise'
@@ -76,8 +77,9 @@ gem "fog-aws"
 # include Mini Magick for resizing images before saving to the database
 gem "mini_magick"
 
-gem 'carrierwave-aws'
-
 gem 'ranked-model'
+
+# include simple_form gem
+gem 'simple_form'
 
 gem 'stripe'
