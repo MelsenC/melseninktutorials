@@ -39,7 +39,7 @@
               <b><%= lesson.title %></b>
               -
               <%= lesson.subtitle %>
-              <%= link_to 'Edit', edit_instructor_section_lesson_path(section, lesson), class: 'badge badge-success' %>
+              <%= link_to 'Edit', edit_instructor_lesson_path(lesson), class: 'badge badge-success' %>
               <%= link_to 'Delete', '#', class: 'badge badge-danger' %>
             </li>
           <% end %>

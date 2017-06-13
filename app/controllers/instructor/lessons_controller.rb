@@ -18,12 +18,12 @@ class Instructor::LessonsController < ApplicationController
 
   def update
     current_lesson.update_attributes(lesson_params)
-    render plain: 'Updated!'
+  #  redirect_to instructor_course_path(current_section.course)
   end
 
   def destroy
     current_lesson.destroy
-    redirect_to instructor_course_path(current_section.course)
+  #  redirect_to instructor_course_path(current_section.course)
   end
 
   private
