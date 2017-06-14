@@ -2,18 +2,19 @@
 
 <div class="booyah-box col-10 offset-1">
   <h1><%= @course.title %></h1>
-  <br />
 
   <% if flash[:error].present? %>
     <div class="col-10 offset-1 alert alert-danger">
       <%= flash[:error].html_safe %>
     </div>
   <% end %>
-  <div class="row course-image-container">
-    <div class="col-12">
-      <%= image_tag @course.image, class: 'img-fluid course-image mx-auto' %>
+  <% if @course.image? %>
+    <div class="row course-image-container">
+      <div class="col-12">
+        <%= image_tag @course.image, class: 'img-fluid course-image mx-auto' %>
+      </div>
     </div>
-  </div>
+  <% end %>
   <br class="clr" />
   <div class="row">
     <div class="col-sm-4 push-sm-8 col-12 text-center">
@@ -24,7 +25,7 @@
       <% if current_user && current_user == @course.user %>
         <br />
         <br />
-        <%= link_to 'Administer', instructor_course_path(@course), class: 'btn btn-danger btn-large' %>
+        <%= link_to 'Administer', instructor_course_path(@course), class: 'btn btn-danger btn-lg' %>
       <% end %>
       <br />
       <br />
