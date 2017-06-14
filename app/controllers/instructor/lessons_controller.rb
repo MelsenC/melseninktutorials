@@ -18,11 +18,12 @@ class Instructor::LessonsController < ApplicationController
 
   def update
     current_lesson.update_attributes(lesson_params)
-    redirect_to lesson_path(current_lesson)
+    redirect_to instructor_course_path(current_lesson.section.course)
   end
 
   def destroy
     current_lesson.destroy
+#    redirect_to instructor_course_path(current_lesson.section.course)
   end
 
   private
@@ -33,6 +34,7 @@ class Instructor::LessonsController < ApplicationController
     end
   end
 
+  helper_method :current_course
   def current_course
     @current_course ||= Course.find(params[:course_id])
   end

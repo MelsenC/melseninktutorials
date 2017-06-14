@@ -25,6 +25,8 @@
       }
     });
   });
+
+
 </script>
 
 <br />
@@ -40,25 +42,41 @@
   <%= link_to 'Add a new section...', new_instructor_course_section_path(current_course), class: 'btn btn-primary float-left' %>
   <%= link_to 'Preview as a Student', course_path(current_course), class: 'btn btn-warning float-right' %>
   <br class="clr" />  
-  <hr />
   <ul class="sections">
     <% current_course.sections.rank(:row_order).each do |section| %>
-      <li data-update-url=<%= instructor_section_path(section) %>>
-        <%= section.title %>
-        <%= link_to 'Add a new lesson', new_instructor_section_lesson_path(section), class: 'float-right btn btn-primary btn-small' %>
+      <li data-update-url="<%= instructor_section_path(section) %>" class="section-li">
+        <div class="header">
+          <span class="fa fa-ellipsis-v"></span>
+          <%= section.title %>
+          <%= link_to 'Add a new lesson', new_instructor_section_lesson_path(section), class: 'btn btn-primary float-right' %>
+        </div>
+        <br class="clr" />
         <ul class="lessons">
           <% section.lessons.rank(:row_order).each do |lesson| %>
-            <li data-update-url=<%= instructor_lesson_path(lesson) %>>
-              <b><%= lesson.title %></b>
-              -
-              <%= lesson.subtitle %>
-              <%= link_to 'Edit', edit_instructor_lesson_path(lesson), class: 'badge badge-success' %>
-              <%= link_to 'Delete', '#', class: 'badge badge-danger' %>
+            <li data-update-url="<%= instructor_lesson_path(lesson) %>" >
+              <div class="row">
+                <div class="col-1">
+                  <br />
+                  <span class="fa fa-ellipsis-v"></span>
+                </div>
+                <div class="col-10 text-center">
+                  <p>
+                    <b><%= lesson.title %></b>
+                  </p>
+                  <p>
+                    <%= lesson.subtitle %>
+                  </p>
+                </div>
+                <div class="col-1">
+                  <%= link_to 'Edit', edit_instructor_lesson_path(lesson), class: 'badge badge-success' %><br />
+                  <%= link_to 'Delete', instructor_lesson_path(lesson), method: :delete, class: 'badge badge-danger' %>
+                </div>
+              </div>
+              <br class="clr" />
             </li>
           <% end %>
         </ul>
       </li>
-      <hr />
     <% end %>
   </ul>
   <br class="clr" />

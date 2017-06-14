@@ -14,11 +14,15 @@
   width: 100%;
 }
 
-.section {
+.section, .section-li {
   border: 3px solid;
   border-radius: 4px;
   border-color: #a08080 #ccc #ccc #a08080;
   padding: 20px;
+}
+
+.section-li {
+  margin: 15px;
 }
 
 .section:last-child {
@@ -42,4 +46,23 @@
 
 .lesson a b {
   font-size: 25px;
+}
+
+.lessons li {
+  background-color: #300;
+  padding: 8px;
+  margin-top: 10px;
+  color: white;
+  font-family: "Helvetica Neue", Helvetica;
+  font-weight: 100;
+  border-radius: 4px;
+  font-size: 18px;
+}
+
+.lessons li b {
+  font-size: 25px;
+}
+
+.lessons li p {
+  margin: 0;
 }
