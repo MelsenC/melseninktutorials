@@ -62,11 +62,46 @@
 
     <div id="footer">
       <div class="container">
-        <b>Teachers</b>
-        <br />
-        <%= link_to 'Teach a Course', new_instructor_course_path %>
+        <div class="row">
+          <div class="col-12 col-sm-3">
+            <b>Teachers</b>
+            <br />
+            <%= link_to 'Teach a Course', new_instructor_course_path %>
+            <br />
+            <%= link_to 'My Dashboard', dashboard_path %>
+          </div>
+          <div class="col-12 col-sm-3">
+            <b>About</b>
+            <br />
+            <%= link_to 'Team', '#' %>
+            <br />
+            <%= link_to 'Careers', '#' %>
+            <br />
+            <%= link_to 'Privacy Policy', '#' %>
+          </div>
+          <div class="col-12 col-sm-3">
+            <b>Contact</b>
+            <br />
+            info@melsenink.com
+          </div>
+          <div class="col-12 col-sm-3 social">
+            <b>Social</b>
+            <br />
+            <br />
+            <%= link_to 'https://github.com/MelsenC' do %>
+              <span class="fa fa-github-square fa-2x social-button"></span>
+            <% end %>
+            <%= link_to 'https://www.facebook.com/Melsenink-T-Shirts-and-Graphic-Design-274889252645750/' do %>
+              <span class="fa fa-facebook-square fa-2x social-button"></span>
+            <% end %>
+            <%= link_to 'https://twitter.com/melsenink?lang=en' do %>
+              <span class="fa fa-twitter-square fa-2x social-button"></span>
+            <% end %>
+          </div>
+        </div>
       </div>
     </div>
+
     <script src="http://vjs.zencdn.net/5.19.2/video.js"></script>
     <script src="http://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
   </body>
