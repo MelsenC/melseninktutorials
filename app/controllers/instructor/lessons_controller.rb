@@ -19,7 +19,7 @@ class Instructor::LessonsController < ApplicationController
 
   def destroy
     current_lesson.destroy
-#    redirect_to instructor_course_path(current_lesson.section.course)
+    redirect_to :back
   end
 
   private
