@@ -80,7 +80,7 @@
                 </div>
                 <div class="col-1">
                   <%= link_to 'Edit', edit_instructor_lesson_path(lesson), class: 'badge badge-success' %><br />
-                  <%= link_to 'Delete', instructor_lesson_path(lesson), method: :delete, class: 'badge badge-danger' %>
+                  <%= link_to 'Delete', instructor_lesson_path(lesson), method: :delete, class: 'badge badge-danger', data: {confirm: 'Are you sure?'} %>
                 </div>
               </div>
               <br class="clr" />
